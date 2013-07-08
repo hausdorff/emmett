@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo "PARSING ALL TRAINING DATA"
+cd lib/pyli/
+for f in ../../data/lexed/*.lx
+do
+    BN=`basename ${f%\.*}`.prs
+    cat $f | make -s pyli > ../../data/parsed/$BN 2> /dev/null
+    echo ../data/parsed/$BN
+done
+cd ../../
