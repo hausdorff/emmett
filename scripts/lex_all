@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cd lib/pyli/
+for f in ../../data/train/*.py
+do
+    BN=`basename $f`
+    cat $f | make -s pyle > ../../data/lexed/$BN.lx 2> /dev/null
+    echo ../data/lexed/$BN
+done
+cd ../../
