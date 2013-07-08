@@ -8,6 +8,6 @@ startup:
 lex_all: startup
 	@./scripts/lex_all
 
-parse_all: lex_all
+parse_all: startup
 	@./scripts/parse_all
 
