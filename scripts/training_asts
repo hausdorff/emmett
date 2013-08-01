@@ -1,0 +1,9 @@
+#!/bin/sh
+
+echo "ALL TRAINING -> ASTS"
+for f in data/train/*.py
+do
+    BN=`basename ${f%\.*}`_ast.json
+    cat $f | python ./src/pyToJson.py > data/ast/$BN
+    echo data/ast/$BN
+done
