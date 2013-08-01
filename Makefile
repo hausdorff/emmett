@@ -15,5 +15,8 @@ parse_training: startup
 training_asts: startup
 	@./scripts/training_asts
 
+model_ifs: startup
+	@./scripts/model_ifs
+
 ast_explore: startup
 	@python src/ast_magic.py
